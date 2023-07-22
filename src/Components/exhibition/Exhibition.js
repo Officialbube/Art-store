@@ -13,7 +13,7 @@ const Exhibition = () => {
                     <p></p>
                     <div>
                         <p>Start on : 08:00 GTS . Monday</p>
-                        <p>GET EXCLUSIVE VIEWING OF CONTEMPORARY ART AND CONNECT WITH INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR HIGHEST AND LOWEST BIDS.</p>
+                        <p>GET EXCLUSIVE VIEWING  CONTEMPORARY ART AND CONNECT WITH INVESTORS AND AUCTIONEERS ACROSS THE WORLD BRINGING THEIR HIGHEST AND LOWEST BIDS.</p>
                         <div>
                             <a>See more</a>
                             <button>Set a reminder</button>
