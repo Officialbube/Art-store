@@ -15,7 +15,7 @@ function App() {
         <Route path="/auction" element={ <Auction/> }/>
         <Route path="/drop" element={ <Drop/> }/>
       </Routes>
-    <Footer/>
+    
     </BrowserRouter>
   );
 }
