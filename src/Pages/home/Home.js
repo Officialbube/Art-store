@@ -1,4 +1,5 @@
 import React from 'react'
+import Exhibition from '../../Components/exhibition/Exhibition'
 
 import FeaturedProducts from '../../Components/featuredProducts/featuredProducts'
 
@@ -11,23 +12,24 @@ const Home = () => {
   return (
     <section>
       <h1 className='text-3xl font-medium text-center mx-8'>
-      Photography is poetry & beautiful untold stories
+        Photography is poetry & beautiful untold stories
       </h1>
       <p className='text-center mx-6 text-base font-medium leading-6 mt-12'>
-      Flip through more than 10,000 vintage shots,
-      old photograghs, historic images and captures seamlessly in one place.
-      Register to get top access.
+        Flip through more than 10,000 vintage shots,
+        old photograghs, historic images and captures seamlessly in one place.
+        Register to get top access.
       </p>
       <div className='hidden sm:block'>
-      <Slider />
+        <Slider />
       </div>
       <div className='h-80 w-96 mx-2.5 relative mt-7 sm:hidden'>
-        <CardShow/>
+        <CardShow />
       </div>
       <FeaturedProducts />
-      
-      
-      
+      <Exhibition />
+
+
+
     </section>
   )
 }
