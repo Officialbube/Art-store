@@ -10,7 +10,7 @@ import Slider from '../../Components/slider/Slider'
 
 const Home = () => {
   return (
-    <section>
+    <section className='w-screen'>
       <h1 className='text-3xl font-medium text-center mx-8'>
         Photography is poetry & beautiful untold stories
       </h1>
