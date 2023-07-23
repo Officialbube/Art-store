@@ -8,7 +8,7 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 const Header = () => {
   return (
     <div>
-      <nav className='flex justify-between items-center w-screen px-4 h-24'>
+      <nav className='flex justify-between items-center w-screen overflow-hidden px-4 h-24'>
         <div className='flex flex-col gap-2 lg:hidden'>
           <span className='bg-black w-6 h-px block'></span>
           <span className='bg-black w-6 h-px block'></span>
