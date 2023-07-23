@@ -12,4 +12,6 @@ export {default as show1} from './images/cardShow/Rectangle 242 (1).png'
 export {default as show2} from './images/cardShow/Rectangle 244.png'
 export {default as show3} from './images/cardShow/Rectangle 246 (1).png'
 
+export {default as galleryImg} from './images/gallery.jpeg'
+
 export const creators = [creator1,creator2,creator3,creator4,creator5];
