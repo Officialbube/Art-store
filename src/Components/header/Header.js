@@ -8,15 +8,15 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 const Header = () => {
   return (
     <div>
-      <nav className='flex justify-between items-center w-screen overflow-hidden px-4 h-24'>
+      <nav className='flex justify-between items-center w-screen overflow-hidden px-4 lg:px-28 h-24'>
         <div className='flex flex-col gap-2 lg:hidden'>
           <span className='bg-black w-6 h-px block'></span>
           <span className='bg-black w-6 h-px block'></span>
           <span className='bg-black w-6 h-px block'></span>
         </div>
-        <p className='text-2xl font-bold'>ARTSY.</p>
+        <p className='text-2xl lg:text-4xl font-bold'>ARTSY.</p>
         <nav className='md:flex items-center gap-x-12 text-2xl font-medium hidden sm:hidden '>
-          <Link to="/">Home</Link>
+          <Link to="/" >Home</Link>
           <Link to="/market">Marketplace</Link>
           <Link to="/auction">Auctions</Link>
           <Link to="/drop">Drop</Link>
