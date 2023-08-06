@@ -1,17 +1,36 @@
 import React from 'react';
 import { PRODUCTS } from '../../Components/productStore/ProductStore';
 import { BsArrowRight } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom';
+
 
 const ProductItems = () => {
+    
+    const navigate = useNavigate()
+
+    
     return (
         <div className=' '>
             <div className='lg:grid lg:grid-cols-3 lg:gap-[3.31rem]'>
                 {PRODUCTS.map(product => {
+                    const _id = product.name
+                    const idString = (_id) => {
+                        return String(_id).toLowerCase().split(" ").join("")
+                    }
+                    const rootId = idString(_id)
+                   
+                    const handleDetails = () => {
+                        navigate(`/market/${rootId}`, {
+                            state: {
+                                item: product
+                            },
+                        })
+                    }
                     return (
                         <div key={product.id}>
                             <div className='w-full lg:px-[0.88rem] pt-[1.25rem] mb-[2.81rem] bg-white lg:rounded-[0.9375rem] lg:shadow-[0px_34px_68px_0px_rgba(217,225,244,0.36)]'>
-                                <div className='w-full  h-[24rem] lg:h-[17.5rem] '>
-                                    <img src={product.image} className='object-cover w-full h-full overflow-hidden lg:rounded-lg' />
+                                <div onClick={handleDetails} className='w-full  h-[24rem] lg:h-[17.5rem] '>
+                                    <img src={product.image} alt='product' className='object-cover w-full h-full overflow-hidden lg:rounded-lg' />
                                 </div>
 
                                 <div className='flex lg:block justify-between mt-[0.62rem] text-base font-medium leading-6 lg:text-[#333333]'>
