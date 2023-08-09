@@ -8,9 +8,10 @@ const Product = () => {
     useEffect(() => {
         setDetails(location.state.item)
     }, [])
+    let baseQty = 1;
     return (
         <div>
-            <nav className='lg: text-lg font-medium leading-[3.21rem] text-[#BCB7B7] px-[0.5rem]'>
+            <nav className=' text-base font-medium leading-[3.21rem] text-[#BCB7B7] px-[0.5rem]'>
                 <a>Home</a>/
                 <a>Marketplace</a>/
                 <a>Editorials</a>/
@@ -24,18 +25,21 @@ const Product = () => {
                     </div>
                 </div>
                 <div>
-                    <div className='px-[1.75rem]'>
-                        <div className='flex justify-between mt-[1.06rem]'>
+                    <div className='px-[1.75rem] text-base'>
+                        <div className='flex justify-between mt-[1.06rem] text-base font-medium'>
                             <p>{details.name}</p>
                             <p>{details.price}</p>
                         </div>
-                        <p className='mt-[1.88rem]'>Creator : Ali Dawa</p>
+                        <p className='mt-[1.88rem]'>Creator : <span className='text-[#006ca2]'>Ali Dawa</span></p>
                         <p className='mt-[1.25rem]'>Made in Italy</p>
                         <p className='mt-[1.25rem]'>Total views : 1.7K</p>
-                        <div className='mt-[1.56rem]'>
+                        <div className='flex gap-4 mt-[1.56rem] text-3xl font-medium leading-[1.83rem] text-[#333333]'>
                             <button>-</button>
-                            1
-                            <button>+</button>
+                            {baseQty}
+                            <button onClick={() => {
+                                baseQty += 1
+                                console.log(baseQty)
+                            }}>+</button>
                         </div>
                         <div className='mt-[1.56rem] flex gap-[1.24rem]'>
                             <button className='bg-[#272727] text-white px-[3.94rem] py-[1.078rem]'>Add to cart</button>
