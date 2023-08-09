@@ -8,7 +8,7 @@ const Product = () => {
     useEffect(() => {
         setDetails(location.state.item)
     }, [])
-    let baseQty = 1;
+    const [baseQty,setBaseQty] = useState(1)
     return (
         <div>
             <nav className=' text-base font-medium leading-[3.21rem] text-[#BCB7B7] px-[0.5rem]'>
@@ -34,12 +34,14 @@ const Product = () => {
                         <p className='mt-[1.25rem]'>Made in Italy</p>
                         <p className='mt-[1.25rem]'>Total views : 1.7K</p>
                         <div className='flex gap-4 mt-[1.56rem] text-3xl font-medium leading-[1.83rem] text-[#333333]'>
-                            <button>-</button>
+                            <button onClick={() => 
+                               setBaseQty(baseQty === 1? baseQty = 1 : baseQty - 1)
+                               
+                            }>-</button>
                             {baseQty}
-                            <button onClick={() => {
-                                baseQty += 1
-                                console.log(baseQty)
-                            }}>+</button>
+                            <button onClick={() => 
+                               setBaseQty(baseQty + 1)
+                            }>+</button>
                         </div>
                         <div className='mt-[1.56rem] flex gap-[1.24rem]'>
                             <button className='bg-[#272727] text-white px-[3.94rem] py-[1.078rem]'>Add to cart</button>
