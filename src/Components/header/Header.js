@@ -46,9 +46,10 @@ const Header = () => {
           <a>
             <SearchIcon />
           </a>
-          <a className='' >
+          <Link to="/cart" className='relative' >
             <ShoppingCartOutlinedIcon />
-          </a>
+            <span className='text-[red] absolute font-lg text-lg top-[-0.8rem] right-[-0.5rem]'>0</span>
+          </Link>
           <a className='hidden lg:block'>
             <NotificationsNoneOutlinedIcon />
           </a>

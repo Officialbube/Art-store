@@ -4,6 +4,7 @@ import { Auction, Drop, Home, Market } from './Pages';
 import { Header, Footer } from './Components';
 import './App.css';
 import Product from './Components/product/Product';
+import Cart from './Pages/cart/Cart';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/auction" element={<Auction />} />
         <Route path="/drop" element={<Drop />} />
         <Route path="/market/:id" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
 
     </BrowserRouter>
