@@ -4,9 +4,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import { useSelector} from 'react-redux'
 
 
 const Header = () => {
+  const productData = useSelector((state) => state.cart.productData);
+  console.log(productData);
   const navRef = useRef()
   const showNavBar = () => {
     navRef.current.classList.toggle('hidden')
@@ -48,7 +51,7 @@ const Header = () => {
           </a>
           <Link to="/cart" className='relative' >
             <ShoppingCartOutlinedIcon />
-            <span className='text-[red] absolute font-lg text-lg top-[-0.8rem] right-[-0.5rem]'>0</span>
+            <span className='text-[red] absolute font-lg text-lg top-[-0.8rem] right-[-0.5rem]'>{productData.length}</span>
           </Link>
           <a className='hidden lg:block'>
             <NotificationsNoneOutlinedIcon />
