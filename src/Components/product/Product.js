@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
+import { addToCart } from '../../Redux/features/cart/cartSlice'
 
 
-const Product = () => {
+const Product = ({name, id, price, image }) => {
     const [details, setDetails] = useState({})
     const location = useLocation()
+    const dispatch = useDispatch()
     useEffect(() => {
         setDetails(location.state.item)
     }, [])
@@ -44,7 +47,14 @@ const Product = () => {
                             }>+</button>
                         </div>
                         <div className='mt-[1.56rem] flex gap-[1.24rem]'>
-                            <button className='bg-[#272727] text-white px-[3.94rem] py-[1.078rem]'>Add to cart</button>
+                            <button onClick={() => dispatch(addToCart({
+                                id: details.id,
+                                name: details.name,
+                                image: details.image,
+                                price: details.price,
+                                quantity: baseQty,
+                                
+                            }))} className='bg-[#272727] text-white px-[3.94rem] py-[1.078rem]'>Add to cart</button>
                             <button></button>
                         </div>
                     </div>
