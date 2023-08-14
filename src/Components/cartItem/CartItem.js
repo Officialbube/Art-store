@@ -1,9 +1,10 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { removeFromCart } from '../../Redux/features/cart/cartSlice'
 
 const CartItem = () => {
     const productData = useSelector((state) => state.cart.productData);
-    console.log(productData)
+    const dispatch = useDispatch()
     return (
         <div>
             {productData.map((item) => (
@@ -26,7 +27,9 @@ const CartItem = () => {
                     <div>
 
 
-                        <div></div>
+                        <div>
+                            <button onClick={() => dispatch(removeFromCart(item.id))}>remove</button>
+                        </div>
                     </div>
                 </div>
             )
