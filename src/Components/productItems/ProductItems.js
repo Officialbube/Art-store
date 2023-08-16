@@ -35,7 +35,7 @@ const ProductItems = () => {
 
                                 <div className='flex lg:block justify-between mt-[0.62rem] text-base font-medium leading-6 lg:text-[#333333]'>
                                     <p className='lg:text-[1.375rem]  lg:font-normal lg:leading-8'>{product.name}</p>
-                                    <p className='lg:mt-[1.12rem] lg:text-[1.75rem] lg:font-bold lg:leading-8 lg:mb-[0.44rem]'>{product.price}</p>
+                                    <p className='lg:mt-[1.12rem] lg:text-[1.75rem] lg:font-bold lg:leading-8 lg:mb-[0.44rem]'>${product.price}</p>
                                 </div>
                             </div>
 
