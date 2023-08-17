@@ -51,7 +51,7 @@ const Header = () => {
           </a>
           <Link to="/cart" className='relative' >
             <ShoppingCartOutlinedIcon />
-            <span className='text-[red] absolute font-lg text-lg top-[-0.8rem] right-[-0.5rem]'>{productData.length}</span>
+            <span className='text-[#006ca2] absolute font-lg text-lg top-[-0.8rem] right-[-0.5rem]'>{productData.length}</span>
           </Link>
           <a className='hidden lg:block'>
             <NotificationsNoneOutlinedIcon />
